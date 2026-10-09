@@ -1,0 +1,6 @@
+{
+  "name": "Buildwise Solutions",
+  "description": "E-commerce storefront for configurable business software solutions with interactive demos, real-time feature configurator, transparent pricing in NPR, and implementation request management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
