@@ -1,6 +1,10 @@
-import { SolutionItem, HostingOption } from '../types';
 
-export const HERO_IMAGE_URL = '/src/assets/images/hero_software_architecture_1791519786442.jpg';
+import { SolutionItem, HostingOption } from '../types';
+import { getPreviewImageUrl } from '../lib/storage';
+
+export const HERO_IMAGE_URL = getPreviewImageUrl(
+  'hero_software_architecture_1791519786442.jpg'
+);
 
 export const INITIAL_SOLUTIONS: SolutionItem[] = [
   {
@@ -33,7 +37,7 @@ export const INITIAL_SOLUTIONS: SolutionItem[] = [
     status: 'Available',
     demoAvailable: true,
     demoPath: '/solutions/salon-appointment-management/demo',
-    imagePath: '/src/assets/images/solution_salon_beauty_1791519796653.jpg',
+    imagePath: getPreviewImageUrl('solution_salon_beauty_1791519796653.jpg'),
     targetAudience: 'Hair salons, nail bars, day spas, luxury barbershops, skin aesthetic clinics',
     estimatedDeliveryWeeks: '1–2 weeks',
     packages: [
@@ -171,7 +175,7 @@ export const INITIAL_SOLUTIONS: SolutionItem[] = [
     status: 'Available',
     demoAvailable: true,
     demoPath: '/solutions/futsal-court-booking/demo',
-    imagePath: '/src/assets/images/solution_futsal_booking_1791519808636.jpg',
+    imagePath: getPreviewImageUrl('solution_futsal_booking_1791519808636.jpg'),
     targetAudience: 'Futsal arenas, badminton courts, turf sports complexes',
     estimatedDeliveryWeeks: '2–3 weeks',
     packages: [
@@ -238,7 +242,7 @@ export const INITIAL_SOLUTIONS: SolutionItem[] = [
     status: 'Available',
     demoAvailable: true,
     demoPath: '/solutions/inventory-sales-management/demo',
-    imagePath: '/src/assets/images/solution_inventory_pos_1791519819200.jpg',
+    imagePath: getPreviewImageUrl('solution_inventory_pos_1791519819200.jpg'),
     targetAudience: 'Clothing boutiques, electronics stores, supermarkets, wholesale dealers',
     estimatedDeliveryWeeks: '2–4 weeks',
     packages: [
@@ -302,7 +306,7 @@ export const INITIAL_SOLUTIONS: SolutionItem[] = [
     status: 'Available',
     demoAvailable: true,
     demoPath: '/solutions/restaurant-qr-kitchen-ops/demo',
-    imagePath: '/src/assets/images/solution_inventory_pos_1791519819200.jpg',
+    imagePath: getPreviewImageUrl('solution_inventory_pos_1791519819200.jpg'),
     targetAudience: 'Cafes, fast casual restaurants, bakeries, lounges',
     estimatedDeliveryWeeks: '3 weeks',
     packages: [
@@ -356,7 +360,7 @@ export const INITIAL_SOLUTIONS: SolutionItem[] = [
     status: 'Available',
     demoAvailable: true,
     demoPath: '/solutions/clinic-patient-appointment-portal/demo',
-    imagePath: '/src/assets/images/solution_salon_beauty_1791519796653.jpg',
+    imagePath: getPreviewImageUrl('solution_salon_beauty_1791519796653.jpg'),
     targetAudience: 'Polyclinics, dental clinics, physical therapy centers, veterinary practices',
     estimatedDeliveryWeeks: '2–4 weeks',
     packages: [
@@ -412,7 +416,7 @@ export const INITIAL_SOLUTIONS: SolutionItem[] = [
     startingPriceNPR: 42000,
     status: 'Available',
     demoAvailable: false,
-    imagePath: '/src/assets/images/solution_hotel_resort_1791524586556.jpg',
+    imagePath: getPreviewImageUrl('solution_hotel_resort_1791524586556.jpg'),
     targetAudience: 'Boutique hotels, mountain lodges, heritage guest houses, resorts',
     estimatedDeliveryWeeks: '2–3 weeks',
     packages: [
@@ -478,7 +482,7 @@ export const INITIAL_SOLUTIONS: SolutionItem[] = [
     startingPriceNPR: 45000,
     status: 'Available',
     demoAvailable: false,
-    imagePath: '/src/assets/images/solution_school_edu_1791524600318.jpg',
+    imagePath: getPreviewImageUrl('solution_school_edu_1791524600318.jpg'),
     targetAudience: 'Private K-12 schools, montessori preschools, coaching academies, colleges',
     estimatedDeliveryWeeks: '2–4 weeks',
     packages: [
@@ -544,7 +548,7 @@ export const INITIAL_SOLUTIONS: SolutionItem[] = [
     startingPriceNPR: 28000,
     status: 'Available',
     demoAvailable: false,
-    imagePath: '/src/assets/images/solution_gym_fitness_1791524616791.jpg',
+    imagePath: getPreviewImageUrl('solution_gym_fitness_1791524616791.jpg'),
     targetAudience: 'Gyms, crossfit boxes, yoga studios, martial arts dojos',
     estimatedDeliveryWeeks: '1–2 weeks',
     packages: [
@@ -601,7 +605,7 @@ export const INITIAL_SOLUTIONS: SolutionItem[] = [
     startingPriceNPR: 36000,
     status: 'Available',
     demoAvailable: false,
-    imagePath: '/src/assets/images/solution_auto_workshop_1791524628513.jpg',
+    imagePath: getPreviewImageUrl('solution_auto_workshop_1791524628513.jpg'),
     targetAudience: 'Auto workshops, motorcycle service centers, car detailing studios',
     estimatedDeliveryWeeks: '2–3 weeks',
     packages: [
