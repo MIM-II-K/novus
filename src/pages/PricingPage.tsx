@@ -92,7 +92,7 @@ export const PricingPage: React.FC = () => {
             Hosting & Support Plans
           </h2>
           <p className="text-xs text-neutral-500">
-            Choose whether to self-host on your own infrastructure or let Buildwise manage production reliability.
+            Choose whether to self-host on your own infrastructure or let Lumniscate manage production reliability.
           </p>
         </div>
 

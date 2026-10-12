@@ -12,7 +12,7 @@ export const HowItWorksPage: React.FC = () => {
           Delivery Model & Architecture
         </span>
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-950 mt-1">
-          How Buildwise Solutions Works
+          How LumniscateSolutions Works
         </h1>
         <p className="text-sm sm:text-base text-neutral-600 mt-2 leading-relaxed">
           We bridge the gap between expensive blank-slate software agencies and inflexible closed SaaS platforms. Here is how your tailored business software gets created, customized, and deployed.
@@ -33,7 +33,7 @@ export const HowItWorksPage: React.FC = () => {
               Traditional agencies force you to pay for months of generic wireframing and discovery workshops just to design basic tables and appointment grids.
             </p>
             <p>
-              At Buildwise Solutions, we have already engineered proven architectural foundations for appointment booking, inventory management, restaurant operations, and sports facility scheduling. You start from a hardened, functional software system with zero blank-slate risk.
+              At LumniscateSolutions, we have already engineered proven architectural foundations for appointment booking, inventory management, restaurant operations, and sports facility scheduling. You start from a hardened, functional software system with zero blank-slate risk.
             </p>
             <div className="pt-2">
               <Link to="/solutions" className="text-xs font-semibold text-neutral-900 hover:underline inline-flex items-center gap-1">
@@ -100,7 +100,7 @@ export const HowItWorksPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Comparison: Custom Agency vs Generic SaaS vs Buildwise */}
+      {/* Comparison: Custom Agency vs Generic SaaS vs Lumniscate*/}
       <div className="bg-white rounded-xl border border-neutral-200 p-8 space-y-6">
         <h2 className="text-xl font-bold text-neutral-950 tracking-tight">
           Why Choose Configurable Solutions?
@@ -113,7 +113,7 @@ export const HowItWorksPage: React.FC = () => {
                 <th className="pb-3 font-semibold">Aspect</th>
                 <th className="pb-3 font-semibold">Generic Software Agency</th>
                 <th className="pb-3 font-semibold">Foreign Closed SaaS</th>
-                <th className="pb-3 font-semibold text-neutral-950 font-bold">Buildwise Solutions</th>
+                <th className="pb-3 font-semibold text-neutral-950 font-bold">LumniscateSolutions</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-neutral-100">

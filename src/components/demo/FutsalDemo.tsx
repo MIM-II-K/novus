@@ -603,7 +603,7 @@ export const FutsalDemo: React.FC = () => {
                     Need an online futsal reservation system?
                   </p>
                   <p className="text-[11px] text-emerald-800 leading-relaxed">
-                    Buildwise Solutions configures this high-speed slot reservation platform with Fonepay QR deposit locks starting at NPR 30,000.
+                    Lumniscate configures this high-speed slot reservation platform with Fonepay QR deposit locks starting at NPR 30,000.
                   </p>
                   <Link
                     to="/solutions/futsal-court-booking/customize"

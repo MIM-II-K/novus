@@ -56,7 +56,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ children, title, subti
           <div className="p-5 border-b border-neutral-800 flex items-center justify-between">
             <div>
               <span className="font-bold tracking-tight text-white block text-sm">
-                Buildwise Console
+                Lumniscate Console
               </span>
               <span className="text-[11px] text-neutral-400 font-mono">
                 Pipeline & Lead Admin
@@ -102,7 +102,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ children, title, subti
           <div className="pt-2 border-t border-neutral-800/80 flex items-center justify-between">
             <div className="text-xs">
               <span className="text-white block font-medium">Lead Architect</span>
-              <span className="text-[10px] text-neutral-500">admin@buildwise.np</span>
+              <span className="text-[10px] text-neutral-500">admin@lumniscate.np</span>
             </div>
             <button
               onClick={handleLogout}

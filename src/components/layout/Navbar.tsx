@@ -33,7 +33,7 @@ export const Navbar: React.FC = () => {
             to="/"
             className="text-lg font-bold tracking-tight text-neutral-900 whitespace-nowrap shrink-0 hover:text-neutral-700 transition-colors"
           >
-            Buildwise Solutions
+            Lumniscate
           </Link>
 
           {/* Zone 2: 4-5 single-line clean navigation links */}

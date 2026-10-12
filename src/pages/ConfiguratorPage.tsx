@@ -567,7 +567,7 @@ export const ConfiguratorPage: React.FC = () => {
                   Hosting & Support Plan
                 </h2>
                 <p className="text-xs text-neutral-600 mt-1">
-                  Choose between self-hosting on your server (NPR 0/mo) or worry-free managed cloud hosting by Buildwise Solutions.
+                  Choose between self-hosting on your server (NPR 0/mo) or worry-free managed cloud hosting by LumniscateSolutions.
                 </p>
               </div>
 
@@ -776,7 +776,7 @@ export const ConfiguratorPage: React.FC = () => {
               Cost Summary (NPR)
             </h3>
             <p className="text-[11px] text-neutral-500">
-              Calculated dynamically via Buildwise Pricing Engine.
+              Calculated dynamically via Lumniscate Pricing Engine.
             </p>
           </div>
 
