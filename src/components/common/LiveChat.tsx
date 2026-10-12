@@ -33,7 +33,7 @@ export const LiveChat: React.FC = () => {
     {
       id: 'msg-welcome-1',
       sender: 'rep',
-      text: `Namaste! I'm Sunil from the Buildwise Solutions architecture & sales desk in Kathmandu.`,
+      text: `Namaste! I'm Sunil from the Lumniscate architecture & sales desk in Kathmandu.`,
       time: 'Just now',
     },
     {
@@ -210,7 +210,7 @@ export const LiveChat: React.FC = () => {
                 </div>
                 <p className="text-[11px] text-neutral-400 flex items-center gap-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                  <span>Buildwise Sales Desk · Online</span>
+                  <span>Lumniscate Sales Desk · Online</span>
                 </p>
               </div>
             </div>
@@ -395,7 +395,7 @@ export const LiveChat: React.FC = () => {
             <div className="flex items-center gap-3">
               <a
                 href={`https://wa.me/9779801234567?text=${encodeURIComponent(
-                  'Hello Buildwise Solutions, I have an inquiry about business software implementation.'
+                  'Hello Lumniscate, I have an inquiry about business software implementation.'
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
