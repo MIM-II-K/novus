@@ -694,11 +694,11 @@ export const HOSTING_OPTIONS: HostingOption[] = [
 ];
 
 export const BUSINESS_INFO = {
-  companyName: 'Buildwise Solutions',
+  companyName: 'Lumniscate',
   tagline: 'Configurable Software Tailored for Business Realities',
   currency: 'NPR',
   currencySymbol: 'रू',
-  email: 'hello@buildwise.np',
+  email: 'info@lumniscate.org',
   phone: '+977 1 4528900',
   mobile: '+977 9801234567',
   location: 'Thamel & Jhamsikhel, Kathmandu, Nepal',

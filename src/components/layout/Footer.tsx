@@ -113,7 +113,7 @@ export const Footer: React.FC = () => {
         {/* Quiet divider and copyright */}
         <div className="pt-8 border-t border-neutral-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
           <p>
-            © {new Date().getFullYear()} Buildwise Solutions. All rights reserved. Registered software implementation provider in Nepal.
+            © {new Date().getFullYear()} Lumniscate. All rights reserved. Registered software implementation provider in Nepal.
           </p>
           <div className="flex items-center gap-4">
             <Link to="/privacy" className="hover:text-neutral-800">
