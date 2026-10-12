@@ -363,6 +363,43 @@ export const storageService = {
     return req;
   },
 
+  createLiveChatInquiry(data: {
+    clientName: string;
+    phone: string;
+    email?: string;
+    businessName?: string;
+    solutionSlug?: string;
+    inquiryMessage: string;
+  }): ProjectRequest {
+    const targetSolution =
+      INITIAL_SOLUTIONS.find((s) => s.slug === data.solutionSlug) || INITIAL_SOLUTIONS[0];
+
+    const safeEmail =
+      data.email?.trim() ||
+      `${data.clientName.toLowerCase().replace(/[^a-z0-9]/g, '') || 'inquiry'}@chat.buildwise.np`;
+
+    return this.createRequest({
+      clientName: data.clientName,
+      businessName: data.businessName?.trim() || `${data.clientName}'s Business`,
+      email: safeEmail,
+      phone: data.phone,
+      businessCategory: targetSolution.category,
+      staffCount: 5,
+      branchCount: 1,
+      preferredLanguage: 'Nepali / English',
+      primaryColor: '#171717',
+      solutionId: targetSolution.id,
+      solutionSlug: targetSolution.slug,
+      solutionTitle: targetSolution.title,
+      packageId: 'starter',
+      packageName: 'Starter',
+      selectedAddonIds: [],
+      hostingOptionId: 'managed-cloud',
+      customRequirements: `[Inquiry via Live Sales Chat Desk]: ${data.inquiryMessage}`,
+      status: 'New',
+    });
+  },
+
   // DEMO APPOINTMENTS
   getDemoAppointments(): DemoAppointment[] {
     const raw = localStorage.getItem(STORAGE_KEYS.DEMO_BOOKINGS);

@@ -87,6 +87,16 @@ export const Footer: React.FC = () => {
             </p>
             <ul className="space-y-2 text-xs text-neutral-600">
               <li>
+                <button
+                  type="button"
+                  onClick={() => window.dispatchEvent(new CustomEvent('open-live-chat'))}
+                  className="hover:text-neutral-900 text-left inline-flex items-center gap-1.5 font-medium text-neutral-900 group"
+                >
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                  <span className="group-hover:underline">Live Chat with Sales Desk</span>
+                </button>
+              </li>
+              <li>
                 <Link to="/contact" className="hover:text-neutral-900">
                   Contact & Inquiries
                 </Link>

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
+import { LiveChat } from './components/common/LiveChat';
 import { HomePage } from './pages/HomePage';
 import { SolutionsPage } from './pages/SolutionsPage';
 import { SolutionDetailPage } from './pages/SolutionDetailPage';
@@ -38,6 +39,7 @@ const PublicLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => 
       <Navbar />
       <main className="flex-1">{children}</main>
       <Footer />
+      <LiveChat />
     </div>
   );
 };
@@ -74,6 +76,14 @@ export default function App() {
         />
         <Route
           path="/solutions/:slug/demo"
+          element={
+            <PublicLayout>
+              <InteractiveDemoPage />
+            </PublicLayout>
+          }
+        />
+        <Route
+          path="/demo"
           element={
             <PublicLayout>
               <InteractiveDemoPage />

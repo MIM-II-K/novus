@@ -5,6 +5,7 @@ import { INITIAL_SOLUTIONS, HERO_IMAGE_URL } from '../config/solutionsData';
 import { SolutionCategory } from '../types';
 import { SolutionCard } from '../components/catalog/SolutionCard';
 import { Currency } from '../components/common/Currency';
+import { ClientTestimonials } from '../components/common/ClientTestimonials';
 
 const CATEGORIES: SolutionCategory[] = [
   'Booking & Appointments',
@@ -12,6 +13,7 @@ const CATEGORIES: SolutionCategory[] = [
   'Hospitality',
   'Restaurant Management',
   'Customer Management',
+  'Healthcare & Wellness',
   'Education',
   'Business Operations',
 ];
@@ -336,7 +338,10 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Trust & Engineering Transparency Section (No fake testimonials) */}
+      {/* Verified Client Social Proof & Testimonials */}
+      <ClientTestimonials />
+
+      {/* Trust & Engineering Transparency Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="p-6 bg-white rounded-lg border border-neutral-200 space-y-3">

@@ -10,15 +10,18 @@ export const Navbar: React.FC = () => {
 
   const navLinks = [
     { label: 'Solutions', href: '/solutions' },
+    { label: 'Live Demos', href: '/demo' },
     { label: 'How It Works', href: '/how-it-works' },
     { label: 'Pricing', href: '/pricing' },
-    { label: 'About', href: '/about' },
     { label: 'Contact', href: '/contact' },
   ];
 
   const isActive = (path: string) => {
     if (path === '/solutions') {
-      return location.pathname.startsWith('/solutions');
+      return location.pathname === '/solutions';
+    }
+    if (path === '/demo') {
+      return location.pathname.includes('/demo');
     }
     return location.pathname === path;
   };
@@ -65,10 +68,11 @@ export const Navbar: React.FC = () => {
               </Link>
             ) : (
               <Link
-                to="/solutions/salon-appointment-management"
-                className="px-4 py-2 text-xs font-semibold text-white bg-neutral-900 hover:bg-neutral-800 rounded-md transition-colors whitespace-nowrap shrink-0"
+                to="/demo"
+                className="px-4 py-2 text-xs font-semibold text-white bg-neutral-900 hover:bg-neutral-800 rounded-md transition-colors whitespace-nowrap shrink-0 inline-flex items-center gap-1.5"
               >
-                Explore Salon Demo
+                <span>Try Live Demos</span>
+                <span className="px-1.5 py-0.2 bg-neutral-800 text-[10px] text-neutral-300 rounded font-mono">13</span>
               </Link>
             )}
           </div>
@@ -105,11 +109,11 @@ export const Navbar: React.FC = () => {
           </nav>
           <div className="pt-2 border-t border-neutral-100 flex flex-col gap-2">
             <Link
-              to="/solutions/salon-appointment-management"
+              to="/demo"
               onClick={() => setMobileOpen(false)}
               className="w-full text-center px-4 py-2 text-xs font-semibold text-white bg-neutral-900 rounded-md"
             >
-              Explore Salon Demo
+              Try Live Demos (13 Solutions)
             </Link>
             <Link
               to="/admin"
