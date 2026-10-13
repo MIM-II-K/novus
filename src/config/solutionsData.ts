@@ -1003,6 +1003,9 @@ export const HOSTING_OPTIONS: HostingOption[] = [
 
 export const BUSINESS_INFO = {
   companyName: 'Lumniscate',
+  logoUrl: '/altimage.png',
+  logoHeight: '50px',
+  logoWidth: '120px',
   tagline: 'Configurable Software Tailored for Business Realities',
   currency: 'NPR',
   currencySymbol: 'रू',
