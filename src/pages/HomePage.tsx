@@ -6,6 +6,7 @@ import { SolutionCategory } from '../types';
 import { SolutionCard } from '../components/catalog/SolutionCard';
 import { Currency } from '../components/common/Currency';
 import { ClientTestimonials } from '../components/common/ClientTestimonials';
+import { TrustedByCarousel } from '../components/common/TrustedByCarousel';
 
 const CATEGORIES: SolutionCategory[] = [
   'Booking & Appointments',
@@ -340,6 +341,9 @@ export const HomePage: React.FC = () => {
 
       {/* Verified Client Social Proof & Testimonials */}
       <ClientTestimonials />
+
+      {/* Commercial Implementations & Trusted By Logo Carousel */}
+      <TrustedByCarousel />
 
       {/* Trust & Engineering Transparency Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
