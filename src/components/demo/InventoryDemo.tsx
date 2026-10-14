@@ -93,7 +93,7 @@ const INITIAL_PRODUCTS: ProductItem[] = [
 export const InventoryDemo: React.FC = () => {
   const [viewMode, setViewMode] = useState<'pos' | 'inventory'>('pos');
   const [products, setProducts] = useState<ProductItem[]>(() => {
-    const raw = localStorage.getItem('buildwise_inventory_stock_v1');
+    const raw = localStorage.getItem('lumniscate_inventory_stock_v1');
     if (raw) {
       try {
         return JSON.parse(raw);
@@ -180,7 +180,7 @@ export const InventoryDemo: React.FC = () => {
     });
 
     setProducts(updatedProducts);
-    localStorage.setItem('buildwise_inventory_stock_v1', JSON.stringify(updatedProducts));
+    localStorage.setItem('lumniscate_inventory_stock_v1', JSON.stringify(updatedProducts));
 
     const receiptNo = `INV-${Math.floor(1000 + Math.random() * 9000)}`;
     setCompletedReceipt({
@@ -200,13 +200,13 @@ export const InventoryDemo: React.FC = () => {
   const handleRestock = (sku: string, qty: number) => {
     const updated = products.map((p) => (p.sku === sku ? { ...p, stock: p.stock + qty } : p));
     setProducts(updated);
-    localStorage.setItem('buildwise_inventory_stock_v1', JSON.stringify(updated));
+    localStorage.setItem('lumniscate_inventory_stock_v1', JSON.stringify(updated));
   };
 
   const handleReset = () => {
     if (confirm('Reset retail inventory items and stock levels to defaults?')) {
       setProducts(INITIAL_PRODUCTS);
-      localStorage.setItem('buildwise_inventory_stock_v1', JSON.stringify(INITIAL_PRODUCTS));
+      localStorage.setItem('lumniscate_inventory_stock_v1', JSON.stringify(INITIAL_PRODUCTS));
       setCart([]);
       setCompletedReceipt(null);
     }

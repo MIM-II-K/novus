@@ -77,7 +77,7 @@ const INITIAL_STUDENTS: StudentRecord[] = [
 export const SchoolDemo: React.FC = () => {
   const [viewMode, setViewMode] = useState<'parent' | 'accountant'>('parent');
   const [students, setStudents] = useState<StudentRecord[]>(() => {
-    const raw = localStorage.getItem('buildwise_school_demo_v1');
+    const raw = localStorage.getItem('lumniscate_school_demo_v1');
     if (raw) {
       try {
         return JSON.parse(raw);
@@ -104,7 +104,7 @@ export const SchoolDemo: React.FC = () => {
       s.id === activeStudent.id ? { ...s, status: 'Paid' as const } : s
     );
     setStudents(updated);
-    localStorage.setItem('buildwise_school_demo_v1', JSON.stringify(updated));
+    localStorage.setItem('lumniscate_school_demo_v1', JSON.stringify(updated));
     setPaymentSuccessSlip({ ...activeStudent, status: 'Paid' });
   };
 
@@ -116,7 +116,7 @@ export const SchoolDemo: React.FC = () => {
   const handleReset = () => {
     if (confirm('Reset student fee records?')) {
       setStudents(INITIAL_STUDENTS);
-      localStorage.setItem('buildwise_school_demo_v1', JSON.stringify(INITIAL_STUDENTS));
+      localStorage.setItem('lumniscate_school_demo_v1', JSON.stringify(INITIAL_STUDENTS));
       setPaymentSuccessSlip(null);
     }
   };

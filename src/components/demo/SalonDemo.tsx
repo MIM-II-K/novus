@@ -97,7 +97,7 @@ export const SalonDemo: React.FC = () => {
     const newApt = storageService.addDemoAppointment({
       customerName,
       customerPhone,
-      customerEmail: customerEmail || 'demo.customer@buildwise.np',
+      customerEmail: customerEmail || 'demo.customer@lumniscate.np',
       serviceId: selectedService.id,
       serviceName: selectedService.name,
       staffId: selectedStaffId,

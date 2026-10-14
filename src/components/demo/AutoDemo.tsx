@@ -71,7 +71,7 @@ const INITIAL_JOBS: JobCard[] = [
 export const AutoDemo: React.FC = () => {
   const [viewMode, setViewMode] = useState<'intake' | 'bay'>('intake');
   const [jobs, setJobs] = useState<JobCard[]>(() => {
-    const raw = localStorage.getItem('buildwise_auto_demo_v1');
+    const raw = localStorage.getItem('lumniscate_auto_demo_v1');
     if (raw) {
       try {
         return JSON.parse(raw);
@@ -125,14 +125,14 @@ export const AutoDemo: React.FC = () => {
 
     const updated = [newJob, ...jobs];
     setJobs(updated);
-    localStorage.setItem('buildwise_auto_demo_v1', JSON.stringify(updated));
+    localStorage.setItem('lumniscate_auto_demo_v1', JSON.stringify(updated));
     setGeneratedJobCard(newJob);
   };
 
   const handleStatusProgress = (id: string, status: JobCard['status']) => {
     const updated = jobs.map((j) => (j.id === id ? { ...j, status } : j));
     setJobs(updated);
-    localStorage.setItem('buildwise_auto_demo_v1', JSON.stringify(updated));
+    localStorage.setItem('lumniscate_auto_demo_v1', JSON.stringify(updated));
   };
 
   const handleNotifyCustomerPickup = (job: JobCard) => {
@@ -145,7 +145,7 @@ export const AutoDemo: React.FC = () => {
   const handleReset = () => {
     if (confirm('Reset workshop job cards?')) {
       setJobs(INITIAL_JOBS);
-      localStorage.setItem('buildwise_auto_demo_v1', JSON.stringify(INITIAL_JOBS));
+      localStorage.setItem('lumniscate_auto_demo_v1', JSON.stringify(INITIAL_JOBS));
       setGeneratedJobCard(null);
     }
   };

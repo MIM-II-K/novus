@@ -93,7 +93,7 @@ export const HomePage: React.FC = () => {
                 {!heroImgError ? (
                   <img
                     src={HERO_IMAGE_URL}
-                    alt="Buildwise Software Architecture and Implementation Studio"
+                    alt="Lumniscate Software Architecture and Implementation Studio"
                     referrerPolicy="no-referrer"
                     onError={() => setHeroImgError(true)}
                     className="w-full aspect-[4/3] object-cover rounded-lg"

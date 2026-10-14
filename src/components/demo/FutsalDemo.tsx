@@ -118,7 +118,7 @@ const INITIAL_MATCHES: FutsalMatch[] = [
 export const FutsalDemo: React.FC = () => {
   const [viewMode, setViewMode] = useState<'customer' | 'admin'>('customer');
   const [matches, setMatches] = useState<FutsalMatch[]>(() => {
-    const raw = localStorage.getItem('buildwise_futsal_matches_v1');
+    const raw = localStorage.getItem('lumniscate_futsal_matches_v1');
     if (raw) {
       try {
         return JSON.parse(raw);
@@ -198,20 +198,20 @@ export const FutsalDemo: React.FC = () => {
 
     const updated = [newMatch, ...matches];
     setMatches(updated);
-    localStorage.setItem('buildwise_futsal_matches_v1', JSON.stringify(updated));
+    localStorage.setItem('lumniscate_futsal_matches_v1', JSON.stringify(updated));
     setConfirmedMatch(newMatch);
   };
 
   const handleStatusChange = (matchId: string, status: FutsalMatch['status']) => {
     const updated = matches.map((m) => (m.id === matchId ? { ...m, status } : m));
     setMatches(updated);
-    localStorage.setItem('buildwise_futsal_matches_v1', JSON.stringify(updated));
+    localStorage.setItem('lumniscate_futsal_matches_v1', JSON.stringify(updated));
   };
 
   const handleReset = () => {
     if (confirm('Reset futsal court bookings to seeded demo state?')) {
       setMatches(INITIAL_MATCHES);
-      localStorage.setItem('buildwise_futsal_matches_v1', JSON.stringify(INITIAL_MATCHES));
+      localStorage.setItem('lumniscate_futsal_matches_v1', JSON.stringify(INITIAL_MATCHES));
       setConfirmedMatch(null);
     }
   };

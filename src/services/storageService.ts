@@ -3,10 +3,10 @@ import { INITIAL_SOLUTIONS } from '../config/solutionsData';
 import { calculateEstimate } from './pricingEngine';
 
 const STORAGE_KEYS = {
-  REQUESTS: 'buildwise_project_requests_v1',
-  ADMIN_AUTH: 'buildwise_admin_session_v1',
-  DEMO_BOOKINGS: 'buildwise_demo_bookings_v1',
-  SOLUTIONS_OVERRIDE: 'buildwise_solutions_v1',
+  REQUESTS: 'lumniscate_project_requests_v1',
+  ADMIN_AUTH: 'lumniscate_admin_session_v1',
+  DEMO_BOOKINGS: 'lumniscate_demo_bookings_v1',
+  SOLUTIONS_OVERRIDE: 'lumniscate_solutions_v1',
 };
 
 // Seed realistic initial demo appointments for Velvet Studio
@@ -376,7 +376,7 @@ export const storageService = {
 
     const safeEmail =
       data.email?.trim() ||
-      `${data.clientName.toLowerCase().replace(/[^a-z0-9]/g, '') || 'inquiry'}@chat.buildwise.np`;
+      `${data.clientName.toLowerCase().replace(/[^a-z0-9]/g, '') || 'inquiry'}@chat.lumniscate.np`;
 
     return this.createRequest({
       clientName: data.clientName,
@@ -526,10 +526,10 @@ export const storageService = {
 
   loginAdmin(passcode: string): boolean {
     // Valid passcodes for demo evaluator and admin
-    if (passcode === 'buildwise2026' || passcode === 'admin123' || passcode === '9042') {
+    if (passcode === 'lumniscate2026' || passcode === 'admin123' || passcode === '9042') {
       const session = {
         authenticated: true,
-        email: 'admin@buildwise.np',
+        email: 'admin@lumniscate.np',
         role: 'super_admin',
         expiresAt: Date.now() + 24 * 60 * 60 * 1000, // 24 hours
       };

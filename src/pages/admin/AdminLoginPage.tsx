@@ -27,7 +27,7 @@ export const AdminLoginPage: React.FC = () => {
   };
 
   const handleDemoFill = () => {
-    setPasscode('buildwise2026');
+    setPasscode('lumniscate2026');
     setError('');
   };
 
@@ -92,7 +92,7 @@ export const AdminLoginPage: React.FC = () => {
             </button>
           </div>
           <p className="text-[11px] text-neutral-500 font-mono">
-            Passkey: <span className="bg-neutral-200 px-1 py-0.5 rounded">buildwise2026</span>
+            Passkey: <span className="bg-neutral-200 px-1 py-0.5 rounded">lumniscate2026</span>
           </p>
         </div>
 

@@ -139,7 +139,7 @@ export const AdminLeadsPage: React.FC = () => {
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement('a');
     link.setAttribute('href', encodedUri);
-    link.setAttribute('download', `buildwise_leads_${new Date().toISOString().split('T')[0]}.csv`);
+    link.setAttribute('download', `lumniscate_leads_${new Date().toISOString().split('T')[0]}.csv`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

@@ -110,7 +110,7 @@ const INITIAL_RESERVATIONS: HotelReservation[] = [
 export const HotelDemo: React.FC = () => {
   const [viewMode, setViewMode] = useState<'guest' | 'frontdesk'>('guest');
   const [reservations, setReservations] = useState<HotelReservation[]>(() => {
-    const raw = localStorage.getItem('buildwise_hotel_demo_v1');
+    const raw = localStorage.getItem('lumniscate_hotel_demo_v1');
     if (raw) {
       try {
         return JSON.parse(raw);
@@ -159,20 +159,20 @@ export const HotelDemo: React.FC = () => {
 
     const updated = [newRes, ...reservations];
     setReservations(updated);
-    localStorage.setItem('buildwise_hotel_demo_v1', JSON.stringify(updated));
+    localStorage.setItem('lumniscate_hotel_demo_v1', JSON.stringify(updated));
     setConfirmedRes(newRes);
   };
 
   const handleStatusChange = (id: string, status: HotelReservation['status']) => {
     const updated = reservations.map((r) => (r.id === id ? { ...r, status } : r));
     setReservations(updated);
-    localStorage.setItem('buildwise_hotel_demo_v1', JSON.stringify(updated));
+    localStorage.setItem('lumniscate_hotel_demo_v1', JSON.stringify(updated));
   };
 
   const handleReset = () => {
     if (confirm('Reset hotel room reservations to initial sample state?')) {
       setReservations(INITIAL_RESERVATIONS);
-      localStorage.setItem('buildwise_hotel_demo_v1', JSON.stringify(INITIAL_RESERVATIONS));
+      localStorage.setItem('lumniscate_hotel_demo_v1', JSON.stringify(INITIAL_RESERVATIONS));
       setConfirmedRes(null);
     }
   };
@@ -469,7 +469,7 @@ export const HotelDemo: React.FC = () => {
                     Need a direct booking system for your resort?
                   </p>
                   <p className="text-[11px] text-amber-800 leading-relaxed">
-                    Stop paying 20% to Booking.com. Buildwise Solutions deploys direct hotel booking engines starting at NPR 42,000.
+                    Stop paying 20% to Booking.com. Lumniscate Solutions deploys direct hotel booking engines starting at NPR 42,000.
                   </p>
                   <Link
                     to="/solutions/hotel-resort-reservation-system/customize"

@@ -66,7 +66,7 @@ const INITIAL_MEMBERS: GymMember[] = [
 export const GymDemo: React.FC = () => {
   const [viewMode, setViewMode] = useState<'kiosk' | 'manager'>('kiosk');
   const [members, setMembers] = useState<GymMember[]>(() => {
-    const raw = localStorage.getItem('buildwise_gym_demo_v1');
+    const raw = localStorage.getItem('lumniscate_gym_demo_v1');
     if (raw) {
       try {
         return JSON.parse(raw);
@@ -90,7 +90,7 @@ export const GymDemo: React.FC = () => {
         m.id === found.id ? { ...m, lastCheckIn: 'Just now' } : m
       );
       setMembers(updated);
-      localStorage.setItem('buildwise_gym_demo_v1', JSON.stringify(updated));
+      localStorage.setItem('lumniscate_gym_demo_v1', JSON.stringify(updated));
     } else {
       alert('Member not found. Please verify phone number or member ID.');
     }
@@ -104,7 +104,7 @@ export const GymDemo: React.FC = () => {
   const handleReset = () => {
     if (confirm('Reset gym member records?')) {
       setMembers(INITIAL_MEMBERS);
-      localStorage.setItem('buildwise_gym_demo_v1', JSON.stringify(INITIAL_MEMBERS));
+      localStorage.setItem('lumniscate_gym_demo_v1', JSON.stringify(INITIAL_MEMBERS));
       setCheckedInNotice(null);
     }
   };

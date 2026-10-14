@@ -957,12 +957,12 @@ export const HOSTING_OPTIONS: HostingOption[] = [
       'Full deployment to your designated server/cloud account',
       'Complete administrative root access handover',
       'Standard 30-day initial deployment warranty included',
-      'Zero recurring fee payable to Buildwise Solutions',
+      'Zero recurring fee payable to Lumniscate Solutions',
     ],
   },
   {
     id: 'managed-cloud',
-    name: 'Buildwise Managed Cloud Hosting',
+    name: 'Lumniscate Managed Cloud Hosting',
     description: 'Worry-free cloud hosting, automatic HTTPS SSL certificates, automated daily database backups, and 99.9% availability monitoring.',
     monthlyNPR: 2500,
     features: [
@@ -1004,7 +1004,7 @@ export const HOSTING_OPTIONS: HostingOption[] = [
 export const BUSINESS_INFO = {
   companyName: 'Lumniscate',
   logoUrl: '/altimage.png',
-  logoHeight: '50px',
+  logoHeight: '75px',
   logoWidth: '120px',
   tagline: 'Configurable Software Tailored for Business Realities',
   currency: 'NPR',
