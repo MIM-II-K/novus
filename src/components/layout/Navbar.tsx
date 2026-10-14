@@ -36,7 +36,7 @@ export const Navbar: React.FC = () => {
             to="/"
             className="flex items-center gap-2 text-lg font-bold tracking-tight text-neutral-900 whitespace-nowrap shrink-0 hover:opacity-90 transition-opacity"
           >
-            <img src="/logo.png" alt="lumniscate Logo" className="h-8 sm:h-10 w-auto object-contain" />
+            <img src="/logo.png" alt="lumniscate" className="h-8 sm:h-10 w-auto object-contain" />
           </Link>
 
           {/* Zone 2: Navigation Links (Visible only on lg screens and above so tablets don't cram) */}
